@@ -12,24 +12,24 @@ namespace NodeExercise{
             this.depthIndicator = "";
         }
 
-        createNode(_value:T) {
+        public createNode(_value: T): Tree<T> {
             return new Tree<T>(_value);
         }
 
-        appendChild(_obj: Tree<T>) {
+        public appendChild(_obj: Tree<T>): void {
             this.children.push(_obj);
             _obj.parent = this;
             _obj.depthIndicator = this.depthIndicator + "*";
         }
 
-        removeChild(_obj: Tree<T>) {
+        removeChild(_obj: Tree<T>): void{
             let index:number = -1;
             index = this.children.indexOf(_obj);
             if(index > -1)
-                this.children.splice(index,1);
+                this.children.splice(index, 1);
         }
 
-        printTree() {
+        printTree(): void{
             if(this.value != null) {
                 console.log(this.depthIndicator + this.value.toString());
             }

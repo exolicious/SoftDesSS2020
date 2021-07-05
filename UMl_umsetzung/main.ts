@@ -1,16 +1,16 @@
-namespace uml_umsetzung {
+namespace uml_umsetzung { //Namespaces müssen mit einem Großbuchstaben anfangen
     let sentence: string = prompt("Satz bitte.");
-    let stringArray: string[] = sentence.split(" ");
+    let stringArray: string[] = sentence.split(" ");//genauer benennen z.b sentenceArray
 
-    let out1: string = "";
+    let out1: string = ""; //Könnte besser benannt sein bzw funktion der Variable genauer beschreiben z.b output_first_sentence
     stringArray.forEach(element => {
         element = turnString(element);
         out1 += element;
     });
 
-    let out2: string = turnString(stringArray);
+    let out2: string = turnString(stringArray);//genauer benennen: output_second_sentence
 
-    let out3: string = turnString(sentence);
+    let out3: string = turnString(sentence);//genauer benennen: output_third_sentence
 
     console.log(out1);
     console.log(out2);
